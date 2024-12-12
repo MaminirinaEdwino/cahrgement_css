@@ -114,24 +114,3 @@
     }
 }
 
-.animation_5 > div > div{
-    position: absolute;
-    width: 200px;
-    background-color: transparent;
-    
-}
-.animation_5 > div > div > div{
-    background-color: red;
-    width: calc(50px / var(--i));
-    height: calc(50px / var(--i));
-    border-radius: 50px;
-
-}
-@keyframes rotation_animation {
-    0%{
-        transform: rotate(0);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
