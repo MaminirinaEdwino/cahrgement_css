@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.loader{
+    background-color: rgb(1, 1, 34);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.loader > div {
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+.animation_1 > div{
+    animation: animation_loader 2s infinite linear ;
+}
+@keyframes animation_loader {
+    0%{
+        height: 20px;
+        background-color: yellow;
+    }
+    50%{
+        height: 200px;
+        background-color: orange;
+    }
+    100%{
+        height: 20px;
+    }
+}
+
+.animation_2 > div{
+    animation: animation_loader_2 2s infinite linear;
+}
+@keyframes animation_loader_2 {
+    0%{
+        background-color: rgb(1, 1, 34);
+    }
+    20%{
+        background-color: red;
+    }
+    40%{
+        background-color: orangered;
+    }
+    60%{
+        background-color: yellow;
+    }
+    80%{
+        background-color: green;
+    }
+    100%{
+        background-color: rgb(1, 1, 34);
+    }
+}
+
+.animation_3 > div{
+    animation: animation_loader_3 2s infinite linear;
+    position: relative;
+}
+@keyframes animation_loader_3 {
+    0%{
+        top: 0px;
+        background-color: blue;
+    }
+    25%{
+        top: -50px;
+    }
+    50%{
+        top: 0px;
+        height: 100px;
+        transform: rotate(360deg);
+        background-color: green;
+    }
+    75%{
+        top: 50px;
+    }
+    100%{
+        top: 0px;
+        background-color: yellow;
+    }
+}
+
+.animation_4> div{
+    animation: animation_loader_4 20s linear infinite;
+    position: absolute;
+}
+@keyframes animation_loader_4 {
+    0%{
+        height: 20px;
+        background-color: yellow;
+    }
+    20%{
+        height: 200px;
+    }
+    40%{
+        transform: rotate(360deg);
+        height: 150px;
+        background-color: orange;
+    }
+    60%{
+        background-color: orangered;
+    }
+    80%{
+        
+        background-color: red;
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+.animation_5 > div > div{
+    position: absolute;
+    width: 200px;
+    background-color: transparent;
+    
+}
+.animation_5 > div > div > div{
+    background-color: red;
+    width: calc(50px / var(--i));
+    height: calc(50px / var(--i));
+    border-radius: 50px;
+
+}
+@keyframes rotation_animation {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
